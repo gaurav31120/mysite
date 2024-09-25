@@ -22,4 +22,9 @@ def gaurav(request):
     return HttpResponse('<h1>Gaurav Kumar</h1>')
 
 def detail(request,item_id):
-    return HttpResponse('This is item no/id: %s' % item_id)
+    item = Item.objects.get(pk=item_id)
+    context = {
+        'item':item
+    }
+    return render(request,'food/detail.html',context)
+    # return HttpResponse('This is item no/id: %s' % item_id)
