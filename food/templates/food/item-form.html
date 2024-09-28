@@ -1,0 +1,8 @@
+<form method="POST">
+    {% csrf_token %}  <!-- this token is used for security reasons -->
+    {{form}}
+    <button type="submit">Save</button>
+    
+   
+
+</form>
