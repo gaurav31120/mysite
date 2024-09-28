@@ -1,3 +1,5 @@
+{% extends 'food/base.html' %}
+{% block body %}
 <form method="POST">
     {% csrf_token %}  <!-- this token is used for security reasons -->
     {{form}}
@@ -6,3 +8,4 @@
    
 
 </form>
+{% endblock %}
